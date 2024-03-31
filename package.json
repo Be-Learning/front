@@ -1,0 +1,44 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./build/server/main.js",
+  "scripts": {
+    "build": "babel src -d build & webpack",
+    "start": "node ./build/server/main.js",
+    "dev": "cross-env NODE_ENV=local nodemon --exec babel-node ./src/server/main.js",
+    "pc-debug": "cross-env NODE_ENV=local HOST=local.gmarket.co.kr nodemon --exec babel-node ./src/server/main.js"
+  },
+  "dependencies": {
+    "cross-fetch": "^3.1.5",
+    "dnscache": "^1.0.2",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "fastify": "^3.27.2",
+    "fastify-cookie": "^5.6.0",
+    "fastify-static": "^4.5.0",
+    "ffi-napi": "^4.0.3",
+    "make-promises-safe": "^5.1.0",
+    "point-of-view": "^5.1.0",
+    "ref-napi": "^3.0.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.5",
+    "@babel/node": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "babel-loader": "^8.2.5",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "core-js": "^3.23.2",
+    "cross-env": "^7.0.3",
+    "fastify-webpack-hot": "^1.1.0",
+    "nodemon": "^2.0.18",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "src/public/*"
+    ]
+  }
+}
