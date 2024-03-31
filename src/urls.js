@@ -4,7 +4,7 @@ const urls = {
   self: `${origins.self}/e`,
   eventNodeApi: origins.eventNodeApi,
   eventPlatform: `${origins.eventApi}/eventPlatform`,
-  smileclubMemberApi: `${origins.memberApi}/api/SmileClub`,
+  smileclubMemberApi: `${origins.memberApi}/api/Club`,
   script: origins.script,
   signinssl: origins.signinssl,
   cssBase: `${origins.script}/pc/css/application/kr/promotion`,
